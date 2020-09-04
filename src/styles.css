@@ -1,0 +1,108 @@
+/* Add application styles & imports to this file! */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+  .bodyColor{
+    background-color:whitesmoke;
+}
+  .fill-space {
+    flex: 1 1 auto;
+   
+  }
+  .backgroundImage{
+    background-image: url(assets/images/background.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+  }
+  /* .mat-dialog-container{
+    background: transparent;
+    color: rgba(0,0,0,.87);
+} */
+/* .mat-dialog-container{
+  display:table-header-group
+} */
+  .example-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  html, body, material-app, mat-sidenav-container, .my-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  snack-bar-container.success-snackbar {
+    background-color: seagreen;
+  }
+  .success-snackbar .mat-simple-snackbar {
+    color: white;
+  }
+  
+  .spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: seagreen;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+  @media(max-width: 800px) {
+    .responsive_table {
+        overflow-x: auto !important;
+    }
+  
+    .mat-table1 {
+        min-width:800px;
+    }
+
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,46 @@
+.pagePadding{
+    padding: 10px;
+  }
+  
+ 
+  /** normal style **/
+  .btn{
+    background: lightgreen;
+    margin: 5px;
+}
+
+/** on active **/
+
+.btn:focus{
+    background: green;
+    margin: 5px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+}
+.content{
+  background-color: white;
+  grid-column: 1;
+  padding: 10px;
+}
+.product-image{
+  background-color: whitesmoke;
+  width: 250px;
+  height: 250px;
+}
+#center{
+  display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(231, 230, 241);
+  color: black;
+  text-align: center;
+}

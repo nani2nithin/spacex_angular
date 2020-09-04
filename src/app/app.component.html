@@ -1,0 +1,122 @@
+<div class="pagePadding">
+    <h4>SpaceX Launch Programs</h4>
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="card pagePadding">
+                <h5><b>Filters</b></h5>
+                <div class="container">
+                    <u>
+                        <p style="text-align: center;"> Launch Year </p>
+
+                    </u>
+
+                    <div class="row " id="launchYear">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-warning" id="2006"
+                                (click)="onClickLaunchYear($event)">2006</button>
+                            <button type="submit" class="btn btn-warning" id="2008"
+                                (click)="onClickLaunchYear($event)">2008</button>
+                            <button type="submit" class="btn btn-warning" id="2010"
+                                (click)="onClickLaunchYear($event)">2010</button>
+                            <button type="submit" class="btn btn-warning" id="2012"
+                                (click)="onClickLaunchYear($event)">2012</button>
+                            <button type="submit" class="btn btn-warning" id="2014"
+                                (click)="onClickLaunchYear($event)">2014</button>
+                            <button type="submit" class="btn btn-warning" id="2016"
+                                (click)="onClickLaunchYear($event)">2016</button>
+                            <button type="submit" class="btn btn-warning" id="2018"
+                                (click)="onClickLaunchYear($event)">2018</button>
+                            <button type="submit" class="btn btn-warning" id="2020"
+                                (click)="onClickLaunchYear($event)">2020</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-warning" id="2007"
+                                (click)="onClickLaunchYear($event)">2007</button>
+                            <button type="submit" class="btn btn-warning" id="2009"
+                                (click)="onClickLaunchYear($event)">2009</button>
+                            <button type="submit" class="btn btn-warning" id="2011"
+                                (click)="onClickLaunchYear($event)">2011</button>
+                            <button type="submit" class="btn btn-warning" id="2013"
+                                (click)="onClickLaunchYear($event)">2013</button>
+                            <button type="submit" class="btn btn-warning" id="2015"
+                                (click)="onClickLaunchYear($event)">2015</button>
+                            <button type="submit" class="btn btn-warning" id="2017"
+                                (click)="onClickLaunchYear($event)">2017</button>
+                            <button type="submit" class="btn btn-warning" id="2019"
+                                (click)="onClickLaunchYear($event)">2019</button>
+                        </div>
+                    </div>
+                    <br>
+                    <u>
+                        <p style="text-align: center;"> Successful Launch </p>
+
+                    </u>
+
+                    <div class="row" id="successfulLaunch">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-warning" id="true"
+                                (click)="onClickSuccessfulLaunch($event)">True</button>
+
+                        </div>
+                        <div class="col-6">
+
+                            <button type="submit" class="btn btn-warning" id="false"
+                                (click)="onClickSuccessfulLaunch($event)">False</button>
+
+                        </div>
+                    </div>
+                    <br>
+                    <u>
+                        <p style="text-align: center;"> Successful Landing </p>
+
+                    </u>
+
+                    <div class="row" id="successfulLanding">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-warning" id="true"
+                                (click)="onClickSuccessfulLanding($event)">True</button>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-warning" id="false"
+                                (click)="onClickSuccessfulLanding($event)">False</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10">
+
+            <div class="row">
+                <div class=" col-md-6 col-sm-6 col-lg-3 pb-4" *ngFor="let data of spacexData">
+                    <div class="content">
+                        <img class="product-image" id="center" src="{{data.mission_patch_small}}">
+                        <div style=" padding: 10px;">
+
+
+                            <p style="color: blue; font-weight: bold;">{{data.mission_name}} </p>
+
+                            <p style="font-weight: bold;">Mission Ids:</p>
+                            <ul *ngFor="let dataVal of data.mission_ids">
+                                <li>{{dataVal}}</li>
+                            </ul>
+                            <p><b>Launch Year: </b>{{ data.launch_year}}</p>
+                            <p><b> Successful Launch: </b>{{ data.launch_success}}</p>
+                            <p><b>Successful Landing: </b>{{ data.land_success}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="footer">
+    <p style="padding-top: 5px;font-size: 15px">
+        <b>Developed By:</b> Akula Nagendra Rama Nithin
+    </p>
+</div>
