@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'SpaceX';
   baseUrl = "https://api.spaceXdata.com/v3/launches?limit=100";
   spacexData = [];
+  checkData: boolean;
 
   constructor(
     private authService: AuthService,
@@ -28,7 +29,9 @@ export class AppComponent {
     this.authService.spacexData(data).subscribe(
       (res) => {
         console.log(res)
+        
         if (res.length != 0) {
+          this.checkData=true;
           for (var i = 0; i < res.length; i++) {
             if (res[i].mission_id.length == 0) {
               res[i].mission_id[0] = " "
@@ -43,6 +46,8 @@ export class AppComponent {
             }
             this.spacexData.push(dataValue)
           }
+        }else{
+          this.checkData=false
         }
 
 
